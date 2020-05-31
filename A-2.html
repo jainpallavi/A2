@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignmnent 3</title>
+<style>
+h1 {
+margin-top:0px;
+margin-bottom:0px;
+border-top: 12px solid black;
+margin-right: auto;
+margin-left: auto;
+width:74%;
+}
+
+.columnA {
+width: 100%;
+margin-top:5px;
+margin-bottom: 5px;
+height:30px;
+}
+
+.columnB {
+float: left;
+width: 70%;
+margin-top:5px;
+margin-bottom: 5px;
+height:50px;
+}
+
+.columnC {
+float: right;
+height:50px;
+width: 30%;
+margin-top:5px;
+text-align: center;
+margin-bottom: 5px;
+}
+
+.columnD{
+width: auto;
+margin-top:5px;
+text-align: center;
+margin-bottom: 5px;
+padding: 10px;
+}
+
+.columnE {
+float: left;
+width: 25%;
+margin-top:5px;
+text-align: right;
+margin-bottom: 5px;
+height:40px;
+}
+
+.columnF {
+  float: right;
+  margin-top:5px;
+  width: 72%;
+  margin-bottom: 5px;
+  height:40px;
+}
+
+.item
+{   
+     width: 74%;
+    background-color: white;
+     margin-top:0;
+     margin-bottom: 10px;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid grey;
+}
+
+.item1
+{    margin-top:7px;
+     width: 98%;
+     background-color:#e0e0e0;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top:10px;
+     margin-bottom: 10px;
+}
+
+.item2
+{    float:left;
+     width: 15%;
+     margin-bottom: 5px;
+     background-color:#e0e0e0;
+     text-align:right;
+}
+
+
+.item3{
+      float:right;  
+      width:84%;
+      margin-bottom: 5px;
+      background-color:#e0e0e0;
+      text-align:left;
+}
+
+.item4
+{   
+     background-color: white;
+     margin-bottom:0rem;
+     margin-left: auto;
+     margin-right: auto;
+     width:74%; 
+}
+
+.item5
+{    height: 50px;
+     width: 100%;
+     min-width: 430px; 
+}
+
+.darker,.darker1,.darker2{
+  background-color: #cccccc;
+  padding: 1px;
+  text-align:center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.darker{
+ height: 40px;
+  margin-top: 4px;}
+.darker1{
+ height: 20px;
+  width:50%;
+  margin-top: 10px;}
+.darker2{
+  width:99%;
+}
+
+button.column0 {
+  width: 100%;
+  margin-top:5px;
+  margin-bottom: 5px;
+  height:53px;
+}
+
+.background{
+  background-color: black;
+  color:white;
+  font-size: small;
+  margin-right: 5px;
+}
+
+.WebContainer{
+    width:100%;
+    min-width:1000px;
+    height:auto;
+}
+
+.articles{
+    width:100%; 
+    height: auto;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+
+.msgbody:nth-child(odd) .align{
+display: block;
+width: 100%;
+float: right;
+}
+
+.msgbody:nth-child(odd) p{
+float:right;
+}
+
+p{
+margin-top:0.1em;
+margin-bottom:0.1em;
+}
+
+.Container{
+border: 2px solid #dedede;
+background-color: #e5e5e5;
+border-radius: 5px;
+padding: 1px;
+text-align: left;
+height:20px;
+width:80%;
+}
+
+.msgbody:nth-child(odd) .Container{
+display:block;
+float:right;
+text-align:right;
+}
+
+.time-right {
+float: right;
+color: #aaa;
+}
+
+.r{
+float: right;
+}
+
+.l{
+float: left;
+}
+
+.day {
+color: dimgray;
+}
+
+.tab {
+text-align:right;
+width:99.5%;
+height:40px;
+margin-bottom: 0;
+background-color: white;
+}
+
+.tab button {
+background-color: #f5f5f5;
+float: left;
+border:none;
+outline: none;
+cursor: pointer;
+padding: 2px 2px;
+transition: 0.3s;
+margin-left:10px;
+width:20%;
+height:40px;
+margin-bottom: 0;
+text-decoration: underline;
+border: 1px solid lightgray;
+}
+
+.h{
+margin-right:10px;
+}
+
+.hh{
+  margin-left:10px;
+}
+
+.tabcontent {
+background-color: #f5f5f5;
+display: none;
+padding: 15px 15px;
+margin-left:0px; 
+margin-right:0px;
+margin-top:0px;
+margin-bottom: 0;
+min-height: auto!important;
+overflow: auto;
+position: relative;
+}
+
+textarea{
+height:100%;
+width: 95%;
+}
+
+.but{
+background-color: darkgrey;
+padding: 10px 10px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+border:none;
+margin-bottom: 10px;
+}
+
+.tab button.active {
+text-decoration: none;
+border-bottom:none;
+}
+
+.bs{ 
+float:right;
+}
+
+.formf * {
+vertical-align: bottom;
+margin-top:5px;
+}
+</style>
+<script>
+
+function openBox(evt, BoxName) {
+  
+        var i, tabcontent, tablinks;
+        
+        tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+        tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+        document.getElementById(BoxName).style.display = "block";
+        evt.currentTarget.className += " active";
+
+}
+
+</script>
+</head>
+
+<body style="margin:0;">
+
+<div class="WebContainer">
+  <h1></h1>
+    <div class="item" >
+         <form method="get">
+                <div class="r h">
+                    <u><b>Logout</b></u>
+                </div>
+                <div class="hh">
+                      <font size="+2"><b>Textify</b></font><font size="+1" color="grey">      Because Text Messaging Rocks</font></font>
+                </div>
+                <center><font size="+3"><b>(212)5551234</b></font></center>
+                <center><font size="-2"><u>What is this number?</u></font></center>
+          <form>
+                <div class="item1" style="height:220px" >
+                  <p class="formf">
+                        <br>
+                        <div class="item2" height:800px >
+                              <label for="browser" ><b>To:</b></label>
+                              <br>
+                              <br>
+                              <label for="comment"><b>Message:</b></label>
+                        </div> 
+                        <div class="item3" height:800px >
+                              <select  name="browser" id="browser"  size="1">
+                                  <option>            </option>
+                                  <option> Nancy Rathore</option>
+                                  <option> Narendra Gill</option>
+                              </select>
+                              <font color="grey">   << Phone number or Name</font>
+                              <br>
+                              <br>
+                                    <div class="articles">
+                                          <textarea name="comment" rows="4" cols="80" form="usrform"  >  </textarea>
+                                    </div>
+                                    <u>Attach a photo to this text.</u>
+                                    <br>
+                                    <br>
+                                    <button class="but">Send Text Message</button>
+                                    <span>
+                                            <font color="gray">Or, <u>Schedule for later delivery.</u></font>
+                                    </span>
+                        </div>
+                  </p>
+                </div>
+          </form>
+          <div class="tab">
+            <button class="tablinks" onclick="openBox(event, 'Recent Conversation')"><b>Recent Conversation</b></button>
+            <button class="tablinks" onclick="openBox(event, 'All Conversation')"><b>All Conversation</b></button>
+            <button class="tablinks" onclick="openBox(event, 'Photos')"><b>Photos</b></button>
+            <div class="h">
+                <u>Change Password</u>
+            </div>
+          </div>
+
+          <div id="Recent Conversation" class="tabcontent" >
+                  <div class="columnA">
+                          <font size="+2">(518)6661234</font>
+                          <u><font color="grey">   Set a name for this number.</font></u>
+                          <span align="right" style="float: right;">
+                                <font size="+2" t><a alhref="" target="_blank"> View All Conversations >> </a></font>
+                          </span>             
+                  </div>
+
+                  <form action="">
+                          <div>
+                                  <label for="enter">New Text Message</label>
+                          </div>
+                          <div class="columnB">
+                            <div>
+                                <textarea name="comment" rows="3"  form="usrform"  >  </textarea>
+                          </div>
+                          </div>
+                          <div class="columnC">
+                                  <button style="width: 100%; height:100%;" >Send Message</button>
+                          </div>
+                          <div >
+                                    <p><a href="" target="_blank">Attach a photo </a> or <a href="" target="_blank">schedule for later delivery.</a></p>
+                          </div>
+                          <div  class="darker2 columnD">
+                                    <p><b>You have more than 1 message scheduled for later delivery. </b>
+                                    <br><a href="" target="_blank">Click here to view them.</a></p>.
+                          </div>
+                  </form>
+
+                  <div class="msgbody clearfix ">
+                      <p>
+                          <b>(518)6661234</b>
+                          <span class="day">Today</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container">
+                                Hello!
+                          </div>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="msgbody clearfix ">
+                      <p>
+                          <b>You - (212) 666-1234</b>
+                          <span class="day">Today</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container ">
+                                Hi! How are you?
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="msgbody clearfix">
+                      <p>
+                          <b>(518)6661234</b>
+                          <span class="day">Today</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container">
+                              I am good. What about you?
+                          </div>  
+                      </div>
+                  </div>
+                  
+                  <div class="msgbody clearfix ">
+                      <p>
+                          <b>You - (212) 666-1234</b>
+                          <span class="day">Today</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container ">
+                                Me too!
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="msgbody clearfix ">
+                      <p>
+                          <b>(518)6661234</b>
+                          <span class="day">Yesterday</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container ">
+                                What is your id number?
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="msgbody clearfix ">
+                      <p>
+                          <b>You - (212) 666-1234</b>
+                          <span class="day">Yesterday</span>
+                      </p>
+                      <div class="clearfix align">
+                          <div class="Container ">
+                                My id number is 24657.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div  class="darker columnD">
+                      <p><b><a href="" target="_blank">Load More Message</a></b></u></p>
+                      There are 217 more message in conversation.
+                  </div>                             
+          </div>
+ 
+          <div id="All Conversation" class="tabcontent" >
+        
+                <div>
+                <b><font size="+2">Top Conversations</font></b>
+                </div>
+                <hr>
+                <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                          <u><b>(508) 555-1234</b></u>
+                          <br><font color="darkgrey">233 Messages</font>
+                      </div>
+                      <div class="columnF">  <!-- for column 2 --> 
+                            <span class="background"> <!-- for dark background -->
+                            NEW
+                            </span> 
+                          I am on my way to to you place and will reach in 20 minutes. Be ready on time.
+                        </div>           
+                  </div>
+
+                  <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                        <u><b>Sarah Kailey</b></u>
+                        <br><font color="darkgrey">40 Messages</font>
+                      </div>
+                      <div class="columnF">  <!-- for column 2 --> 
+                        This birthday, I wish you abundant happiness and love. May all your dreams turn into reality.
+                      </div>           
+                  </div>
+
+                  <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                          <u><b>Luke Joans</b></u>
+                          <br><font color="darkgrey">153 Messages</font>
+                      </div>
+                      <div class="columnF">  <!-- for column 2 --> 
+                          May the joy that you have spread in the past come back to you on this day. Wishing you a very happy birthday!
+                      </div>           
+                  </div>
+
+                  <div>
+                  <b><font size="+2">All Conversations</font></b>
+                  </div>
+                  <hr>
+                  <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                            <u><b>(212)5050933</b></u>
+                            <br><font color="darkgrey">89 Messages</font>
+                      </div>
+                      <div class="columnF">  <!-- for column 2 -->     
+                            <span class="background"> <!-- for dark background -->
+                                NEW
+                            </span>
+                          Count your life by smiles, not tears. Count your age by friends, not years. Happy birthday!
+                      </div>   
+                </div>  
+
+                  <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                          <u><b>(789)3735500</b></u>
+                          <br><font color="darkgrey">10 Messages</font>
+                      </div>
+                      <div class="columnF">  <!-- for column 2 --> 
+                          <span class="background"> <!-- for dark background -->
+                                NEW
+                          </span>
+                          Happy birthday! I hope all your birthday wishes and dreams come true.
+                      </div>           
+                  </div>
+
+                  <div class="column0">
+                      <div class="columnE"> <!-- for right text and column 1 -->
+                            <u><b>Namrita Jain</b></u>
+                            <br><font color="darkgrey">52 Messages</font>
+                        </div>
+                        <div class="columnF">  <!-- for column 2 --> 
+                            <span class="background"> <!-- for dark background -->
+                                    NEW
+                          </span>
+                              On your birthday I’m going to share the secret to staying young: lie about your age.
+                        </div>           
+                  </div>
+
+                  <div class="column0">
+                        <div class="columnE"> <!-- for right text and column 1 -->
+                              <u><b>Mom</b></u>
+                              <br><font color="darkgrey">10 Messages</font>
+                        </div>
+                        <div class="columnF">  <!-- for column 2 --> 
+                                Happy birthday! Today, I would advise you to be nice to your kids.
+                        </div>           
+                  </div>
+
+                  <div class="column0">
+                        <div class="columnE"> <!-- for right text and column 1 -->
+                            <u><b>Dad</b></u>
+                            <br><font color="darkgrey">13 Messages</font>
+                        </div>
+                        <div class="columnF">  <!-- for column 2 --> 
+                              Don’t forget your appointment tomorrow with Recruitment Ltd at 13.30 pm. If you can’t make it, reply to this text.
+                      </div> 
+                  </div>
+
+                  <div class="column0">
+                        <div class="columnE"> <!-- for right text and column 1 -->
+                              <u><b>(212)5552354</b></u>
+                              <br><font color="darkgrey">313 Messages</font>
+                        </div>
+                        <div class="columnF">  <!-- for column 2 --> 
+                              <span class="background"> <!-- for dark background -->
+                                      NEW
+                              </span>
+                                Hi, I have a problem with the t-shirt, it has a rip in it, are you able to replace it? 
+                        </div>           
+                  </div>
+
+                  <div class="column0">
+                        <div class="columnE"> <!-- for right text and column 1 -->
+                            <u><b>Manish Sharma</b></u>
+                            <br><font color="darkgrey">185 Messages</font>
+                        </div>
+                        <div class="columnF">  <!-- for column 2 --> 
+                          Thank you for chatting to Phil at Big Software, out of 5 how would you rate our service today?
+                      </div>           
+                </div>
+          </div>
+ 
+          <div id="Photos" class="tabcontent" >
+                  <p style="text-align:center" >Currently No Photos Available.</p>
+          </div>
+ 
+    </div>
+    <div class="item4" style="height:5px">
+          <div class="l">
+               Textify &copy; 2011
+          </div>
+          <div class="r">
+               All text messanging data is 100% secure. <u>Read our Security Policy</u>
+          </div>
+    </div>
+
+</div>
+</body>
+</html>
